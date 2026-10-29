@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","name":"sites","features":[{"type":"Feature","properties":{"id":1},"geometry":{"type":"Point","coordinates":[77.59,12.97]}},{"type":"Feature","properties":{"id":2},"geometry":{"type":"Point","coordinates":[77.61,12.99]}}]}

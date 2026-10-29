@@ -1,0 +1,16 @@
+# Roadmap
+- [x] Phase 1 — Foundation (data model, auth, storage, app shell, docs site)
+- [x] Phase 2 — Ingestion adapters (image, document, CSV, JSON, GeoJSON)
+- [x] Phase 3 — Data explorer & identity graph
+- [x] Phase 4 — Biodiversity & Darwin Core implementation, docs and unit tests
+- [ ] Phase 4 — Signed-in biodiversity import/export and populated-map verification (needs a real Darwin Core file; signed-in page verified)
+- [x] Phase 5 — Optional AI, immutable interpretations/annotations, evidence-backed human review, public documentation; 50 tests and signed-in document flow passed
+- [x] First review account — email sign-in requested for supplied address; isolated EBiT Review Workspace and admin membership verified
+- [ ] Additional viewer/contributor/curator review accounts (needs additional real email addresses)
+- [ ] Autonomous background runner and recovery of interrupted running jobs (not configured; current jobs are durable and explicitly run/retried)
+- [x] Branding — exact EBIT Grid mark and wordmark, matching favicon; browser-checked
+- [x] Phase 6 — Devices, datastreams, CSV/JSON imports, charts, scoped ingestion keys and documentation; signed-in file/device/replay/revocation flow and phone layout verified
+- [x] Phase 7 — Public read API (hashed keys, rate limits, rights filters), API docs, Apache-2.0/CC BY 4.0 licence files, SECURITY.md; API 200/401/404/429 verified
+- [x] Real open data — 7 CC0/ODC-PDDL/public-domain files (one per adapter) uploaded; 150 GBIF bird records, 240 Mauna Loa CO2 readings, published dataset, AI species suggestion awaiting review
+- [ ] Push code to GitHub (needs the owner to connect GitHub in Lovable)
+- [x] v1.0.0 public release — version, changelog, licence footer; published

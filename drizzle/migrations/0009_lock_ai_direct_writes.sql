@@ -1,0 +1,3 @@
+REVOKE INSERT,UPDATE,DELETE,TRUNCATE,REFERENCES,TRIGGER ON public.ai_jobs,public.interpretations,public.annotations,public.verification_events,public.ai_controls FROM authenticated,anon;
+GRANT SELECT ON public.ai_jobs,public.interpretations,public.annotations,public.verification_events,public.ai_controls TO authenticated;
+GRANT ALL ON public.ai_jobs,public.interpretations,public.annotations,public.verification_events,public.ai_controls TO service_role;

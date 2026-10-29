@@ -1,0 +1,132 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Theme reused from EBIT Grid: deep space surfaces, protocol indigo, spatial cyan, leaf green. */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-leaf: var(--leaf);
+  --color-water: var(--water);
+  --color-heritage: var(--heritage);
+  --color-brand-chip: var(--brand-chip);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --radius: 0.9rem;
+  --brand-chip: oklch(1 0 0);
+  --background: oklch(0.14 0.021 265);
+  --foreground: oklch(0.975 0.004 255);
+  --card: oklch(0.185 0.024 265);
+  --card-foreground: oklch(0.975 0.004 255);
+  --popover: oklch(0.2 0.026 265);
+  --popover-foreground: oklch(0.975 0.004 255);
+  --primary: oklch(0.615 0.152 269);
+  --primary-foreground: oklch(0.99 0.002 255);
+  --leaf: oklch(0.72 0.15 163);
+  --water: oklch(0.73 0.13 205);
+  --heritage: oklch(0.79 0.155 71);
+  --secondary: oklch(0.25 0.028 265);
+  --secondary-foreground: oklch(0.96 0.005 255);
+  --muted: oklch(0.23 0.025 265);
+  --muted-foreground: oklch(0.715 0.031 258);
+  --accent: oklch(0.29 0.045 268);
+  --accent-foreground: oklch(0.97 0.004 255);
+  --destructive: oklch(0.63 0.2 24);
+  --destructive-foreground: oklch(0.99 0.002 255);
+  --border: oklch(1 0 0 / 11%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.615 0.152 269);
+  --chart-1: oklch(0.615 0.152 269);
+  --chart-2: oklch(0.73 0.13 205);
+  --chart-3: oklch(0.72 0.15 163);
+  --chart-4: oklch(0.79 0.155 71);
+  --chart-5: oklch(0.7 0.16 300);
+  --sidebar: oklch(0.17 0.023 265);
+  --sidebar-foreground: oklch(0.975 0.004 255);
+  --sidebar-primary: oklch(0.615 0.152 269);
+  --sidebar-primary-foreground: oklch(0.99 0.002 255);
+  --sidebar-accent: oklch(0.29 0.045 268);
+  --sidebar-accent-foreground: oklch(0.97 0.004 255);
+  --sidebar-border: oklch(1 0 0 / 11%);
+  --sidebar-ring: oklch(0.615 0.152 269);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { color-scheme: dark; background-color: var(--color-background); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    background-image:
+      radial-gradient(900px 480px at 12% -10%, oklch(0.615 0.152 269 / 0.16), transparent 70%),
+      radial-gradient(760px 420px at 92% 4%, oklch(0.73 0.13 205 / 0.12), transparent 70%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.01em; }
+  code, pre, kbd { font-family: var(--font-mono); }
+}
+
+/* Long-form documentation typography */
+.prose-doc { line-height: 1.7; color: var(--foreground); }
+.prose-doc h1 { font-size: 2rem; font-weight: 700; margin: 0 0 1rem; }
+.prose-doc h2 { font-size: 1.35rem; font-weight: 600; margin: 2.25rem 0 0.75rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.prose-doc h3 { font-size: 1.1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+.prose-doc p, .prose-doc ul, .prose-doc ol, .prose-doc table, .prose-doc pre { margin: 0 0 1rem; }
+.prose-doc ul { list-style: disc; padding-left: 1.25rem; }
+.prose-doc ol { list-style: decimal; padding-left: 1.25rem; }
+.prose-doc li { margin: 0.25rem 0; }
+.prose-doc a { color: var(--water); text-decoration: underline; text-underline-offset: 3px; }
+.prose-doc code { font-size: 0.85em; background: var(--muted); padding: 0.1em 0.35em; border-radius: 0.35rem; }
+.prose-doc pre { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; overflow-x: auto; font-size: 0.82rem; }
+.prose-doc pre code { background: transparent; padding: 0; }
+.prose-doc table { width: 100%; border-collapse: collapse; font-size: 0.875rem; display: block; overflow-x: auto; }
+.prose-doc th, .prose-doc td { border: 1px solid var(--border); padding: 0.45rem 0.65rem; text-align: left; vertical-align: top; }
+.prose-doc th { background: var(--muted); font-weight: 600; }
+.prose-doc blockquote { border-left: 3px solid var(--primary); padding-left: 1rem; color: var(--muted-foreground); margin: 0 0 1rem; }
+
+.species-map { z-index: 0; background: var(--muted); }
+.species-marker { stroke: var(--leaf); fill: var(--leaf); fill-opacity: 0.65; }
+.species-marker-sensitive { stroke: var(--heritage); fill: var(--heritage); fill-opacity: 0.65; }
+.species-map .leaflet-popup-content-wrapper, .species-map .leaflet-popup-tip { background: var(--popover); color: var(--popover-foreground); }
+.species-map .leaflet-control-zoom a { background: var(--background); color: var(--foreground); }
